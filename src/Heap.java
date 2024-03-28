@@ -5,7 +5,7 @@ package src;
  * @since 27/03/2024
  * Clase que representa una cola de prioridad
  */
-public class Heap<E extends Comparable<E>> {
+public class Heap<E extends Comparable<E>> implements IPriorityQueue<E> {
     Node<E> root;
     int size;
 
@@ -91,6 +91,15 @@ public class Heap<E extends Comparable<E>> {
      */
     public int size() {
         return this.size;
+    }
+
+
+    /**
+     * Verifica si el heap está vacío
+     * @return true si está vacío, false si no
+     */
+    public boolean isEmpty() {
+        return this.size == 0;
     }
 
 
